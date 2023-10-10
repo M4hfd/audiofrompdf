@@ -8,7 +8,6 @@ def get_text_string():
         page = pdf_file.pages
         pages_pdf_text = ''.join([page.extract_text() for page in page])
         pdf_text = "".join(pages_pdf_text)
-        pdf_file.close()
         return(pdf_text.replace("\n", " "))
 
 
