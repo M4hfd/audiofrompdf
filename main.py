@@ -4,7 +4,7 @@ from gtts import gTTS
 
 def get_text_string():
     file_path = "text.pdf"
-    with pdfplumber.PDF(open(file_path, mode='rb')) as pdf_file:
+    with pdfplumber.open(file_path) as pdf_file:
         page = pdf_file.pages
         pages_pdf_text = ''.join([page.extract_text() for page in page])
         pdf_text = "".join(pages_pdf_text)
