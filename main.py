@@ -8,8 +8,8 @@ def get_text_string():
         page = pdf_file.pages
         pages_pdf_text = ''.join([page.extract_text() for page in page])
         pdf_text = "".join(pages_pdf_text)
-        return(pdf_text.replace("\n", " "))
-
+        pdf_text.replace("\n", " ")
+        return pdf_text
 
 def get_audio_file():
     language = "ru"
